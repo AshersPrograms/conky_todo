@@ -94,16 +94,6 @@ ${goto $alignc}${color #ffa500}${exec echo TODO}${color}
 ${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
 ${execi 10 cat ~/.conky/simple-conky-1.0/todo.txt | fold -w 40 -s}
 ${font}
-${font DejaVu Sans Mono:size=14}
-${goto $alignc}${color #ffa500}${exec echo NOTES}${color}
-${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
-${execi 10 cat ~/.conky/simple-conky-1.0/notes.txt | fold -w 40 -s}
-${font}
-${font DejaVu Sans Mono:size=14}
-${goto $alignc}${color #ffa500}${exec echo QUOTES}${color}
-${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
-${execi 10 cat ~/.conky/simple-conky-1.0/quotes.txt | fold -w 40 -s}
-${font}
 
 ]]
 
