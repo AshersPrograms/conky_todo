@@ -82,9 +82,28 @@ if _VERSION == 'Lua 5.1' and math.floor(return_code/256) == 0 or
 end
 
 conky.text = [[
+${font DejaVu Sans Mono:bold:size=12}${color FFFFFF}${alignc}${time %A, %B %d %Y}${color}${font}
+${font DejaVu Sans Mono:bold:size=32}${color FFFFFF}${alignc}${time %I:%M %p}${color}${font}
+${color #ffa500}${font DejaVu Sans Mono:size=14}SYSTEM INFO${color}
+${color #ffa500}${hr 2}${color}${font DejaVu Sans Mono:size=12}
+${color white}Kernel:$alignr${kernel}
+${color white}CPU:$alignr${cpu cpu1}%
+${color white}Memory:$alignr${mem}/${memmax}
 ${font DejaVu Sans Mono:size=14}
-${execi 10 cat todo.txt | fold -w 40 -s}
-
+${goto $alignc}${color #ffa500}${exec echo TODO}${color}
+${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
+${execi 10 cat ~/.conky/simple-conky-1.0/todo.txt | fold -w 40 -s}
 ${font}
+${font DejaVu Sans Mono:size=14}
+${goto $alignc}${color #ffa500}${exec echo NOTES}${color}
+${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
+${execi 10 cat ~/.conky/simple-conky-1.0/notes.txt | fold -w 40 -s}
+${font}
+${font DejaVu Sans Mono:size=14}
+${goto $alignc}${color #ffa500}${exec echo QUOTES}${color}
+${goto $alignc}${voffset -5}${color #ffa500}${hr 2}${color}
+${execi 10 cat ~/.conky/simple-conky-1.0/quotes.txt | fold -w 40 -s}
+${font}
+
 ]]
 
