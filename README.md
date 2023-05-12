@@ -2,6 +2,8 @@
 
 This is a widget plug-in made for conky
 
+![alt text](https://github.com/AshersPrograms/conky_todo/blob/main/conky_todo.png?raw=true)
+
 ## Features
 
 - System Info: displays the Kernel, CPU, and Ram Usage
